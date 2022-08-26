@@ -101,6 +101,10 @@
   margin: 0 20px;
 }
 
+.element__hidden {
+  display: none;
+}
+
 .element:hover {
   border: 5px solid grey;
 }

@@ -1,5 +1,6 @@
 const nextButton = document.querySelector('.navigation__button-next');
 const backButton = document.querySelector('.navigation__button-back');
+const inputSerch = document.querySelector('.control__search-input');
 let currentPage = 1;
 const limit = 10;
 
@@ -16,13 +17,13 @@ class Section {
       this._renderer(item);
     });
   }
-
+  // добавить добавлние постов
   addItem(item) {
     this._container.append(item);
   }
 
   clearContainer() {
-    //альтернатива innerHTML
+    // найти альтернативу innerHTML
     this._container.innerHTML = '';
   }
 }
@@ -175,3 +176,22 @@ backButton.addEventListener('mousedown', () => {
     })
     .catch((err) => console.log(err));
 });
+
+inputSerch.oninput = function () {
+  let val = this.value.trim();
+  let elements = document.querySelectorAll('.element');
+
+  if (val !== ' ') {
+    elements.forEach((elem) => {
+      if (elem.innerText.search(val) === -1) {
+        elem.classList.add('element__hidden');
+      } else {
+        elem.classList.remove('element__hidden');
+      }
+    });
+  } else {
+    elements.forEach((elem) => {
+      elem.classList.remove('element__hidden');
+    });
+  }
+};
