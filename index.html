@@ -37,21 +37,50 @@
           Далее
         </button>
       </section>
-
-      <footer class="footer"></footer>
-
-      <template class="element-template">
-        <div class="element">
-          <h1 class="element__title"></h1>
-          <p class="element__text"></p>
-          <button
-            class="element__button-delete"
-            type="button"
-            aria-label="delete"
-          ></button>
-        </div>
-      </template>
     </main>
+
+    <div class="popup popup_add_post">
+      <div class="popup__window">
+        <h2 class="popup__title">Добавить новый пост</h2>
+        <button
+          class="popup__close-button"
+          type="button"
+          aria-label="close"
+        ></button>
+        <form class="popup__form" name="popupForm" novalidate>
+          <input
+            class="popup__input popup__input_el_title"
+            type="text"
+            name="title"
+            placeholder="Заголовок"
+            required
+          />
+          <input
+            class="popup__input popup__input_el_body"
+            type="url"
+            name="body"
+            placeholder="Основной текст"
+            required
+          />
+          <button class="popup__save-button" type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer"></footer>
+
+    <template class="element-template">
+      <div class="element">
+        <h1 class="element__title"></h1>
+        <p class="element__text"></p>
+        <button
+          class="element__button-delete"
+          type="button"
+          aria-label="delete"
+        ></button>
+      </div>
+    </template>
+
     <script src="./index.js"></script>
   </body>
 </html>
