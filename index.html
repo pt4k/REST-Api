@@ -4,7 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
     <title>test-Reon</title>
   </head>
-  <body></body>
+  <body class="page">
+    <header class="header"></header>
+
+    <main class="content">
+      <section class="control">
+        <form action="" class="control__search-form" name="searchForm">
+          <input
+            class="control__search-input"
+            type="text"
+            name="search"
+            placeholder="   Поиск"
+          />
+        </form>
+        <button
+          aria-label="add"
+          class="control__add-post"
+          type="button"
+        ></button>
+      </section>
+
+      <section class="posts"></section>
+
+      <section class="navigation">
+        <button class="navigation__button navigation__button-back">
+          Назад
+        </button>
+        <button class="navigation__button navigation__button-next">
+          Далее
+        </button>
+      </section>
+
+      <footer class="footer"></footer>
+
+      <template class="element-template">
+        <div class="element">
+          <h1 class="element__title"></h1>
+          <p class="element__text"></p>
+          <button
+            class="element__button-delete"
+            type="button"
+            aria-label="delete"
+          ></button>
+        </div>
+      </template>
+    </main>
+    <script src="./index.js"></script>
+  </body>
 </html>
