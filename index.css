@@ -161,6 +161,35 @@
   transform: rotate(-45deg);
 }
 
+.comments {
+  color: black;
+  font-family: Arial, sans-serif;
+  max-width: 880px;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+
+.comment {
+  border-bottom: 2px solid grey;
+  padding: 0;
+  margin: 0;
+}
+
+.comment:last-child {
+  border-bottom: 0;
+}
+
+.comment__name {
+  padding: 20px 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.comment__text {
+  padding: 0 0 10px 0;
+  margin: 0;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -309,4 +338,14 @@
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
+}
+
+.popup__view-title {
+  margin: 0 0 0 55px;
+}
+
+.post {
+  padding: 30px;
+  width: 60vw;
+  height: 15vh;
 }

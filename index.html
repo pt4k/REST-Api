@@ -67,6 +67,23 @@
       </div>
     </div>
 
+    <div class="popup popup_view_post">
+      <div class="popup__window">
+        <button
+          class="popup__close-button"
+          type="button"
+          aria-label="close"
+        ></button>
+
+        <section class="post">
+          <h2 class="post__title"></h2>
+          <p class="post__text"></p>
+        </section>
+        <h2 class="popup__title">Комментарии:</h2>
+        <section class="comments"></section>
+      </div>
+    </div>
+
     <footer class="footer"></footer>
 
     <template class="element-template">
@@ -81,6 +98,13 @@
       </div>
     </template>
 
-    <script src="./index.js"></script>
+    <template class="comments-template">
+      <div class="comment">
+        <h1 class="comment__name"></h1>
+        <p class="comment__text"></p>
+      </div>
+    </template>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
